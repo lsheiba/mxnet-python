@@ -1,0 +1,45 @@
+Args: --data_dir=/workspace/data --log_dir=$RUNDIR --training_iteration=1000
+Cmd: mnist-deep.py
+EnvVars: []
+ExecutionDir: /src/mnist-deep
+Images:
+  BaseImage: tensorflow/tensorflow
+  GpuImage: kuberlab/gpu-monitoring:latest
+  PSImage: tensorflow/tensorflow
+Jupyter:
+  UseGPU: false
+MonitoringNamespace: kuberlab
+Requests:
+  CPU: 100m
+  CPULimit: 8000m
+  GPU: 1
+  Memory: 2Gi
+  MemoryLimit: 64Gi
+  PsPods: 0
+  WorkerPods: 0
+Volumes:
+- isLibDir: false
+  isTrainLogDir: true
+  mountPath: /training
+  name: training
+  clusterStorage: {{ .storage }}
+  subPath: training
+- gitRepo:
+    repository: https://github.com/kuberlab-catalog/mnist-deep
+  isLibDir: false
+  isTrainLogDir: false
+  mountPath: /src
+  name: src
+  subPath: ""
+- isLibDir: true
+  isTrainLogDir: false
+  mountPath: /workspace/lib
+  name: lib
+  clusterStorage: {{ .storage }}
+  subPath: lib
+- isLibDir: false
+  isTrainLogDir: false
+  mountPath: /workspace/data
+  name: data
+  clusterStorage: {{ .storage }}
+  subPath: /mnist-data

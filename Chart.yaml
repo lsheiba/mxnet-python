@@ -1,0 +1,14 @@
+Description: Deep mnist training
+Engine: gotpl
+Home: http://kuberlab.com
+Icon: https://storage.googleapis.com/kuberlab/static/favicon.ico
+Keywords:
+- kubernets
+- tensorflow
+- mnist
+Maintainers:
+- Email: agunin@kuberlab.com
+  Name: Gunin Alexander
+Name: mnist-deep
+Version: 1.0.0
+Type: mlapp

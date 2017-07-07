@@ -1,14 +1,13 @@
-Description: Deep mnist training
+Description: kl application template
 Engine: gotpl
 Home: http://kuberlab.com
 Icon: https://storage.googleapis.com/kuberlab/static/favicon.ico
 Keywords:
 - kubernets
 - tensorflow
-- mnist
 Maintainers:
-- Email: agunin@kuberlab.com
-  Name: Gunin Alexander
-Name: mnist-deep
+- Email: lsheiba@kuberlab.com
+  Name: Leonard Sheiba
+Name: klchart1
 Version: 1.0.0
 Type: mlapp

@@ -1,11 +1,11 @@
 Args: --data_dir=/workspace/data --log_dir=$RUNDIR --training_iteration=1000
 Cmd: main.py
 EnvVars: []
-ExecutionDir: /src/mnist-deep
+ExecutionDir: /src/klchart_p3
 Images:
-  BaseImage: lsheiba/tensorflow:latest
-  GpuImage: lsheiba/tensorflow:latest-gpu
-  PSImage: lsheiba/tensorflow
+  BaseImage: lsheiba/tensorflow:latest-py3
+  GpuImage: lsheiba/tensorflow:latest-py3-gpu
+  PSImage: lsheiba/tensorflow:latest-py3
 Jupyter:
   UseGPU: true
 MonitoringNamespace: kuberlab
@@ -25,7 +25,7 @@ Volumes:
   clusterStorage: {{ .storage }}
   subPath: training
 - gitRepo:
-    repository: https://github.com/lsheiba/klchart1
+    repository: https://github.com/lsheiba/klchart_p3
   isLibDir: false
   isTrainLogDir: false
   mountPath: /src

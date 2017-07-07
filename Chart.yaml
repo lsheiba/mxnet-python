@@ -1,13 +1,14 @@
-Description: kl application template
+Description: kl application template python3
 Engine: gotpl
 Home: http://kuberlab.com
 Icon: https://storage.googleapis.com/kuberlab/static/favicon.ico
 Keywords:
 - kubernets
 - tensorflow
+- python3
 Maintainers:
 - Email: lsheiba@kuberlab.com
   Name: Leonard Sheiba
-Name: klchart1
+Name: klchart_p3
 Version: 1.0.0
 Type: mlapp

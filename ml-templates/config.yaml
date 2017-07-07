@@ -1,13 +1,13 @@
 Args: --data_dir=/workspace/data --log_dir=$RUNDIR --training_iteration=1000
-Cmd: mnist-deep.py
+Cmd: main.py
 EnvVars: []
 ExecutionDir: /src/mnist-deep
 Images:
-  BaseImage: tensorflow/tensorflow
-  GpuImage: kuberlab/gpu-monitoring:latest
-  PSImage: tensorflow/tensorflow
+  BaseImage: lsheiba/tensorflow:latest
+  GpuImage: lsheiba/tensorflow:latest-gpu
+  PSImage: lsheiba/tensorflow
 Jupyter:
-  UseGPU: false
+  UseGPU: true
 MonitoringNamespace: kuberlab
 Requests:
   CPU: 100m
@@ -25,7 +25,7 @@ Volumes:
   clusterStorage: {{ .storage }}
   subPath: training
 - gitRepo:
-    repository: https://github.com/kuberlab-catalog/mnist-deep
+    repository: https://github.com/lsheiba/klchart1
   isLibDir: false
   isTrainLogDir: false
   mountPath: /src
@@ -42,4 +42,4 @@ Volumes:
   mountPath: /workspace/data
   name: data
   clusterStorage: {{ .storage }}
-  subPath: /mnist-data
+  subPath: /data

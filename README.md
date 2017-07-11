@@ -1,1 +1,1 @@
-# klchart_p3 - python 3
+# klchart_p2 - python 2

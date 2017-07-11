@@ -9,8 +9,6 @@ Images:
 Jupyter:
   UseGPU: true
   Image: lsheiba/tensorflow:latest-gpu
-  UseGPU: false
-  Image: lsheiba/tensorflow:latest
 MonitoringNamespace: kuberlab
 Requests:
   CPU: 100m

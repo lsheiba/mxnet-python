@@ -1,14 +1,16 @@
 Args: --data_dir=/workspace/data --log_dir=$RUNDIR --training_iteration=1000
 Cmd: main.py
 EnvVars: []
-ExecutionDir: /src/klchart_p3
+ExecutionDir: /src/klchart_p2
 Images:
-  BaseImage: tensorflow/tensorflow:latest-py3
-  GpuImage: tensorflow/tensorflow:latest-gpu-py3
-  PSImage: tensorflow/tensorflow:latest-py3
+  BaseImage: tensorflow/tensorflow:latest
+  GpuImage: tensorflow/tensorflow:latest-gpu
+  PSImage: tensorflow/tensorflow:latest
 Jupyter:
-  Image: lsheiba/tensorflow:latest-py3-gpu
   UseGPU: true
+  Image: lsheiba/tensorflow:latest-gpu
+  UseGPU: false
+  Image: lsheiba/tensorflow:latest
 MonitoringNamespace: kuberlab
 Requests:
   CPU: 100m

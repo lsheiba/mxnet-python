@@ -3,10 +3,11 @@ Cmd: main.py
 EnvVars: []
 ExecutionDir: /src/klchart_p3
 Images:
-  BaseImage: lsheiba/tensorflow:latest-py3
-  GpuImage: lsheiba/tensorflow:latest-py3-gpu
-  PSImage: lsheiba/tensorflow:latest-py3
+  BaseImage: tensorflow/tensorflow:latest-py3
+  GpuImage: tensorflow/tensorflow:latest-gpu-py3
+  PSImage: tensorflow/tensorflow:latest-py3
 Jupyter:
+  Image: lsheiba/tensorflow:latest-py3-gpu
   UseGPU: true
 MonitoringNamespace: kuberlab
 Requests:

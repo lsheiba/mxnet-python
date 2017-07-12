@@ -1,14 +1,14 @@
-Description: kl application template python2
+Description: kl mxnet-python
 Engine: gotpl
 Home: http://kuberlab.com
 Icon: https://storage.googleapis.com/kuberlab/static/favicon.ico
 Keywords:
 - kubernets
-- tensorflow
+- mxnet
 - python2
 Maintainers:
 - Email: lsheiba@kuberlab.com
   Name: Leonard Sheiba
-Name: klchart_p2
+Name: mxnet-python
 Version: 1.0.0
 Type: mlapp

@@ -3,12 +3,12 @@ Cmd: main.py
 EnvVars: []
 ExecutionDir: /src/klchart_p2
 Images:
-  BaseImage: tensorflow/tensorflow:latest
-  GpuImage: tensorflow/tensorflow:latest-gpu
-  PSImage: tensorflow/tensorflow:latest
+  BaseImage: mxnet/python:latest
+  GpuImage: mxnet/python:gpu
+  PSImage: mxnet/python:latest
 Jupyter:
   UseGPU: true
-  Image: lsheiba/tensorflow:latest-gpu
+  Image: lsheiba/mxnet-python-gpu:latest
 MonitoringNamespace: kuberlab
 Requests:
   CPU: 100m
@@ -26,7 +26,7 @@ Volumes:
   clusterStorage: {{ .storage }}
   subPath: training
 - gitRepo:
-    repository: https://github.com/lsheiba/klchart_p3
+    repository: https://github.com/lsheiba/mxnet-python
   isLibDir: false
   isTrainLogDir: false
   mountPath: /src
